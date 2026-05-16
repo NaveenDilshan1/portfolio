@@ -36,32 +36,30 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-// Background Meteors Animation
-function createMeteors() {
-    const container = document.createElement('div');
-    container.className = 'background-animations';
-    document.body.prepend(container);
+// Background Particles Animation
+function createParticles() {
+    const container = document.querySelector('.animation-container');
+    if (!container) return;
 
-    for (let i = 0; i < 60; i++) {
-        let meteor = document.createElement('div');
-        meteor.className = 'meteor';
+    for (let i = 0; i < 40; i++) {
+        let particle = document.createElement('div');
+        particle.className = 'particle';
         
-        let left = (Math.random() * 150 - 25) + 'vw';
-        let top = (Math.random() * 150 - 25) + 'vh';
-        let width = (Math.random() * 100 + 40) + 'px';
-        let duration = (Math.random() * 15 + 10) + 's';
-        let delay = (Math.random() * 15) + 's';
+        let size = (Math.random() * 3 + 1) + 'px';
+        let left = Math.random() * 100 + 'vw';
+        let duration = (Math.random() * 20 + 15) + 's';
+        let delay = (Math.random() * 20) + 's';
         
-        meteor.style.left = left;
-        meteor.style.top = top;
-        meteor.style.width = width;
-        meteor.style.animationDuration = duration;
-        meteor.style.animationDelay = delay;
+        particle.style.width = size;
+        particle.style.height = size;
+        particle.style.left = left;
+        particle.style.animationDuration = duration;
+        particle.style.animationDelay = delay;
         
-        container.appendChild(meteor);
+        container.appendChild(particle);
     }
 }
-createMeteors();
+createParticles();
 
 // Theme Toggle Logic
 const themeToggleBtn = document.querySelector('.theme-toggle');
