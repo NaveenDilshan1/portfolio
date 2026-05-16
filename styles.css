@@ -22,6 +22,28 @@
     --btn-secondary-bg: #93C5FD;
 }
 
+html.light {
+    --bg-main: #F8FAFC;
+    --pill-bg: rgba(255, 255, 255, 0.7);
+    --card-bg: #FFFFFF;
+    --card-hover: #F1F5F9;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --accent-cyan: #0284c7;
+    --accent-blue: #2563eb;
+    --accent-purple: #7c3aed;
+    --btn-primary-bg: #0F172A;
+    --btn-primary-text: #F8FAFC;
+    --btn-secondary-bg: #1E293B;
+}
+
+html.light .glowing-star {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    background-color: #0F172A;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -61,19 +83,19 @@ ul {
 .pill-nav {
     position: fixed;
     top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: max(20px, calc(50% - 405px));
+    transform: none;
     background: var(--pill-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 9999px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 800px;
+    gap: 30px;
+    width: max-content;
+    max-width: calc(100vw - 40px);
     z-index: 1000;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
@@ -298,6 +320,26 @@ ul {
 
 .skill-tag i {
     color: var(--text-secondary);
+}
+
+.additional-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.additional-skills-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.additional-skills-list li i {
+    font-size: 20px;
+    margin-top: 2px;
 }
 
 /* --- Projects --- */
@@ -630,8 +672,10 @@ ul {
     }
 
     .pill-nav {
-        width: 95%;
-        padding: 10px;
+        width: calc(100vw - 40px);
+        left: 20px;
+        justify-content: space-between;
+        padding: 10px 20px;
     }
 
     .nav-links a {

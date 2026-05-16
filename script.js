@@ -88,3 +88,35 @@ function createMeteors() {
     }
 }
 createMeteors();
+
+// Theme Toggle Logic
+const themeToggleBtn = document.querySelector('.theme-toggle');
+const themeIcon = themeToggleBtn.querySelector('i');
+
+// Check for saved theme in localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+    themeIcon.classList.replace('bx-moon', 'bx-sun');
+} else {
+    // Default is dark, ensure class is set
+    document.documentElement.classList.add('dark');
+}
+
+// Toggle theme on button click
+themeToggleBtn.addEventListener('click', () => {
+    if (document.documentElement.classList.contains('dark')) {
+        // Switch to light mode
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        themeIcon.classList.replace('bx-moon', 'bx-sun');
+        localStorage.setItem('theme', 'light');
+    } else {
+        // Switch to dark mode
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+        themeIcon.classList.replace('bx-sun', 'bx-moon');
+        localStorage.setItem('theme', 'dark');
+    }
+});
