@@ -22,6 +22,7 @@
     --btn-secondary-bg: #93C5FD;
 }
 
+<<<<<<< HEAD
 html.light {
     --bg-main: #F8FAFC;
     --pill-bg: rgba(255, 255, 255, 0.7);
@@ -44,6 +45,8 @@ html.light .glowing-star {
     background-color: #0F172A;
 }
 
+=======
+>>>>>>> d6d459ee895e36764ba6557e3368a15863c2af5c
 * {
     margin: 0;
     padding: 0;
@@ -83,12 +86,18 @@ ul {
 .pill-nav {
     position: fixed;
     top: 25px;
+<<<<<<< HEAD
     left: max(20px, calc(50% - 405px));
     transform: none;
+=======
+    left: 50%;
+    transform: translateX(-50%);
+>>>>>>> d6d459ee895e36764ba6557e3368a15863c2af5c
     background: var(--pill-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
+<<<<<<< HEAD
     padding: 10px 25px;
     border-radius: 9999px;
     display: flex;
@@ -96,6 +105,15 @@ ul {
     gap: 30px;
     width: max-content;
     max-width: calc(100vw - 40px);
+=======
+    padding: 10px 20px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 800px;
+>>>>>>> d6d459ee895e36764ba6557e3368a15863c2af5c
     z-index: 1000;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
@@ -322,6 +340,7 @@ ul {
     color: var(--text-secondary);
 }
 
+<<<<<<< HEAD
 .additional-skills-list {
     display: flex;
     flex-direction: column;
@@ -342,6 +361,8 @@ ul {
     margin-top: 2px;
 }
 
+=======
+>>>>>>> d6d459ee895e36764ba6557e3368a15863c2af5c
 /* --- Projects --- */
 .projects-list {
     display: flex;
@@ -672,10 +693,15 @@ ul {
     }
 
     .pill-nav {
+<<<<<<< HEAD
         width: calc(100vw - 40px);
         left: 20px;
         justify-content: space-between;
         padding: 10px 20px;
+=======
+        width: 95%;
+        padding: 10px;
+>>>>>>> d6d459ee895e36764ba6557e3368a15863c2af5c
     }
 
     .nav-links a {

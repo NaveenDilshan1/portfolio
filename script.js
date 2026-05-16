@@ -88,6 +88,7 @@ function createMeteors() {
     }
 }
 createMeteors();
+<<<<<<< HEAD
 
 // Theme Toggle Logic
 const themeToggleBtn = document.querySelector('.theme-toggle');
@@ -120,3 +121,5 @@ themeToggleBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark');
     }
 });
+=======
+>>>>>>> d6d459ee895e36764ba6557e3368a15863c2af5c
